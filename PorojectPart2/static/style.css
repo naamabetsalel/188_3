@@ -167,6 +167,7 @@ background: rgba(225, 225, 225, 0.25);
 ::-webkit-input-placeholder{
 color: #fff;
 }
+
 .input-box i{
 position: relative;
 top: -35px;
@@ -274,10 +275,106 @@ gap: 0;
 .GridContainer{
 display: grid;
 grid-template-areas: 
-'header header header'
-'left right right'
+'headerL headerM headerR'
+'left middle right'
 'bottomLeft bottomLeft bottomRight ';
 }
 
+/* page 1 */
+/*
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  direction: rtl; /* Set right-to-left direction for the entire page */
 
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 0px;
+}
+
+formPg1 {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-left: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  height: 420px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.p1 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+.p2 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+.p3 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+.p4 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+.p5 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+.p6 label {
+  display: block;
+  margin-top: 10px;
+  text-align:right;
+}
+
+
+.input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.btnPage1 {
+  display: flex;
+  font-size: 25px;
+  color: #fff;
+  padding: 5px;
+  background: rgba(225, 225, 225, 0.2);
+  border-radius: 30px;
+  margin: 20px;
+  cursor: pointer;
+  transition: .3s ;
+  align-items: center;
+  margin-left: 15px;
+}
+
+
+.btnPage1:hover {
+  background: rgba(225, 225, 225, 0.7);
+}
+
+#result.result-container {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
 

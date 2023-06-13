@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Grade Calculator</title>
+</head>
+<body>
+    <h1>College Grade Calculator</h1>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>GradeQuest .</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="HomePage.html" class="link active">Home</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+<div class="formPg1">
+    <form id="gradeForm">
+    <div class="p1">
+      <label for="grade1">חדוו"א:</label>
+      <input type="number" id="grade1" required><br>
+    </div>
+    <div class="p2">
+      <label for="grade2">פיזיקה 1:</label>
+      <input type="number" id="grade2" required><br>
+    </div>
+    <div class="p3">
+      <label for="grade3">מעם למדינה:</label>
+      <input type="number" id="grade3" required><br>
+    </div>
+    <div class="p4">
+      <label for="grade4">אווירודינמיקה:</label>
+      <input type="number" id="grade4" required><br>
+    </div>
+    <div class="p5">
+      <label for="grade5">מטאורולוגיה:</label>
+      <input type="number" id="grade5" required><br>
+    </div>
+    <div class="p6">
+      <label for="grade6">פלטפורמה:</label>
+      <input type="number" id="grade6" required><br>
+    </div>
+<div class="btnPage1">
+      <button type="button" onclick="calculateGrade()">Calculate</button>
+</div>
+    </form>
+</div>
+</div>
+    <div id="result" class="result-container"></div>
+</body>
+</html>
