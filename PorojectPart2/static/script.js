@@ -30,3 +30,18 @@ function register() {
     x.style.opacity = 0;
     y.style.opacity = 1;
 }
+
+function calculateGrade() {
+    var grade1 = parseFloat(document.getElementById("grade1").value);
+    var grade2 = parseFloat(document.getElementById("grade2").value);
+    var grade3 = parseFloat(document.getElementById("grade3").value);
+    var grade4 = parseFloat(document.getElementById("grade4").value);
+    var grade5 = parseFloat(document.getElementById("grade5").value);
+    var grade6 = parseFloat(document.getElementById("grade6").value);
+    
+    var average = (grade1 + grade2 + grade3 + grade4 + grade5 + grade6) / 6;
+    
+    var resultElement = document.getElementById("result");
+    resultElement.innerHTML = "Your grade average is: " + average.toFixed(2);
+  }
+  

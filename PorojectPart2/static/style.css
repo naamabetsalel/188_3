@@ -280,6 +280,7 @@ grid-template-areas:
 'bottomLeft bottomLeft bottomRight ';
 }
 
+<<<<<<< HEAD
 /* page 1 */
 /*
 body {
@@ -378,3 +379,5 @@ formPg1 {
   font-weight: bold;
 }
 
+=======
+>>>>>>> 75b9fd3bc0177a1a22086f2ef019d92fe59b758e
