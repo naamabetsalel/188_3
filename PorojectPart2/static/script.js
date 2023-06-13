@@ -39,7 +39,7 @@ function calculateGrade() {
     var grade5 = parseFloat(document.getElementById("grade5").value);
     var grade6 = parseFloat(document.getElementById("grade6").value);
     
-    var average = (grade1 + grade2 + grade3 + grade4 + grade5 + grade6) / 6;
+    var average = (grade1*6 + grade2*4 + grade3*2 + grade4*5.5 + grade5*3 + grade6*3) / 23.5;
     
     var resultElement = document.getElementById("result");
     resultElement.innerHTML = "Your grade average is: " + average.toFixed(2);

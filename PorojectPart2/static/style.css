@@ -373,12 +373,13 @@ formPg1 {
 }
 
 #result.result-container {
-  margin-top: 20px;
+  margin-top:0px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
 }
-a{
+
+.p2connect{
  
   
   background: rgba(225, 225, 225, 0.2);
@@ -386,13 +387,13 @@ a{
   border-radius: 30px;
   cursor: pointer;
   transition: .3s ease;
-  margin-top: 150px;
+  margin-top: 20px;
   color: #fff;
   font-size: medium;
-  
+
 }
 
-a:hover{
+.p2connect:hover{
   background-color: rgba(225, 225, 225, 0.7)
 }
 
