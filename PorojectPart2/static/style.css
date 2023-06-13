@@ -280,7 +280,6 @@ grid-template-areas:
 'bottomLeft bottomLeft bottomRight ';
 }
 
-<<<<<<< HEAD
 /* page 1 */
 /*
 body {
@@ -365,6 +364,7 @@ formPg1 {
   transition: .3s ;
   align-items: center;
   margin-left: 15px;
+  border: none;
 }
 
 
@@ -378,6 +378,21 @@ formPg1 {
   font-size: 18px;
   font-weight: bold;
 }
+a{
+ 
+  
+  background: rgba(225, 225, 225, 0.2);
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+  margin-top: 150px;
+  color: #fff;
+  font-size: medium;
+  
+}
 
-=======
->>>>>>> 75b9fd3bc0177a1a22086f2ef019d92fe59b758e
+a:hover{
+  background-color: rgba(225, 225, 225, 0.7)
+}
+
