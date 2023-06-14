@@ -40,6 +40,7 @@ body{
   color: white;
   font-size: 25px;
   font-weight:600 ;
+  
 }
 
 .nav-menu ul{
@@ -56,11 +57,14 @@ body{
   color: #fff;
   padding-bottom: 15px;
   margin:0 25px ;
+  
 }
 
 .link:hover, .active{
   border-bottom: 2px solid #fff;
   transform: scaleX(0); 
+  animation-name: example;
+  animation-duration: 4s;
 }
 .nav-button .btn{
   width: 130px;
@@ -137,6 +141,7 @@ body{
   margin-left: 5px;
 }
 
+
 header{
   color: #fff;
   font-size: 30px;
@@ -164,9 +169,15 @@ header{
   border-radius: 30px;
   border: none;
 
+
 }
-
-
+@keyframes example {
+  from {background-color:rgba(116, 172, 210, 0.7);
+          border-radius: 30px;
+          padding: 20px;}
+  to {background-color: rgba(225, 225, 225, 0.2);
+      border-radius: 15px;}
+}
 .input-field:hover, .input-field:focus{
 background: rgba(225, 225, 225, 0.25);
 }
