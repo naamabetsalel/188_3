@@ -95,8 +95,9 @@ body{
 }
 
 .form-box{
-  position: relative;
-  display: flex;
+  position: fixed;
+  display: block;
+  margin-top: 100px;
   align-items: center;
   justify-content: center;
   width: 512px;
@@ -145,6 +146,11 @@ header{
 .two-forms{
   display: flex;
   gap: 10px;
+}
+
+.userProblems{
+  margin-bottom: 20px;
+  margin-left: 170px;
 }
 
 
@@ -398,14 +404,11 @@ body {
 
   /* page 2 */
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
   
   h1 {
+
     text-align: center;
-    margin-top: 20px;
+    margin-top: 120px;
   }
   
   .result-container {
