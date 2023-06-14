@@ -49,7 +49,6 @@ function calculateGrade() {
   /* page 2 */
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Get the grades from Page 1
     const grades = {
       hadwah: parseInt(localStorage.getItem('grade1')),
       physics: parseInt(localStorage.getItem('grade2')),
@@ -59,7 +58,6 @@ function calculateGrade() {
       platform: parseInt(localStorage.getItem('grade6'))
     };
   
-    // Define the easiness levels and points
     const easiness = {
       hadwah: 2,
       physics: 2.5,
@@ -78,32 +76,29 @@ function calculateGrade() {
       platform: 3
     };
   
-    const scores = {};
+    let bestSubject = null;
+    let maxScore = -Infinity;
   
-    // Calculate the score for each subject
     for (const subject in grades) {
       const grade = grades[subject];
       const easinessValue = easiness[subject];
       const point = points[subject];
-      const score = 90 * easinessValue - grade * point;
-      scores[subject] = score;
-    }
   
-    let bestSubject = null;
-    let maxScore = -Infinity;
-  
-    // Find the subject with the highest score
-    for (const subject in scores) {
-      if (scores[subject] > maxScore) {
-        maxScore = scores[subject];
-        bestSubject = subject;
+      if (grade && easinessValue && point) {
+        const score = 90 * easinessValue - grade * point;
+        if (score > maxScore) {
+          maxScore = score;
+          bestSubject = subject;
+        }
       }
     }
   
-    const bestSubjectElement = document.getElementById('bestSubject');
-    const scoreElement = document.getElementById('score');
+    const resultContainer = document.getElementById('result-container');
   
-    bestSubjectElement.textContent = "Best subject to improve: " + bestSubject;
-    scoreElement.textContent = "Score for the best subject: " + maxScore;
+    if (resultContainer) {
+      resultContainer.textContent = "Best subject to improve: " + bestSubject;
+    } else {
+      console.error("Missing HTML element with specified ID: result-container");
+    }
   });
   
