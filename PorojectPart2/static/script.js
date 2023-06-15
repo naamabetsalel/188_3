@@ -43,6 +43,8 @@ function calculateGrade() {
     
     var resultElement = document.getElementById("result");
     resultElement.innerHTML = "Your grade average is: " + average.toFixed(2);
+
+    
   }
 
 
@@ -50,7 +52,7 @@ function calculateGrade() {
 
   document.addEventListener('DOMContentLoaded', function() {
     const grades = {
-      hadwah: parseInt(localStorage.getItem('grade1')),
+      hadwah: parseInt(document.getElementById("grade1")),
       physics: parseInt(localStorage.getItem('grade2')),
       maam: parseInt(localStorage.getItem('grade3')),
       aviro: parseInt(localStorage.getItem('grade4')),
@@ -98,6 +100,7 @@ function calculateGrade() {
     if (resultContainer) {
       resultContainer.textContent = "Best subject to improve: " + bestSubject;
     } else {
+      console.log(maxScore, grades[0]);
       console.error("Missing HTML element with specified ID: result-container");
     }
   });
