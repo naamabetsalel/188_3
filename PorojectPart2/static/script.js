@@ -112,7 +112,7 @@ function calculateGrade() {
       }
   
       // Display the best subject to improve
-      bestSubjectResult.textContent = `The best subject to improve is ${bestSubject}.`;
+      bestSubjectResult.innerHTML = `The best subject to improve is ${bestSubject}.`;
     }
 
   

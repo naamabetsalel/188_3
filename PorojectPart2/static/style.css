@@ -369,7 +369,7 @@ body {
   }
   .btnGrade{
     margin-top: 500px;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     font-size: 15px;
