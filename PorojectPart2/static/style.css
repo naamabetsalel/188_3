@@ -367,7 +367,23 @@ body {
     border: 1px solid white;
     border-radius: 4px;
   }
-  
+  .btnGrade{
+    margin-top: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight:400;
+    color: black;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(116, 172, 210, 0.7);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+  }
   .btnPage1 {
     display: flex;
     justify-content: center;
@@ -382,7 +398,7 @@ body {
     outline: none;
     background: rgba(116, 172, 210, 0.7);
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+
   }
   
   .btnPage1:hover {

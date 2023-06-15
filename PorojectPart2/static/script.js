@@ -96,19 +96,19 @@ function calculateGrade() {
       }
       if (score3 > bestScore) {
         bestScore = score3;
-        bestSubject = 'מעם';
+        bestSubject = ' מעם למדינה';
       }
       if (score4 > bestScore) {
         bestScore = score4;
-        bestSubject = 'אווירו';
+        bestSubject = 'אווירודינמיקה';
       }
       if (score5 > bestScore) {
         bestScore = score5;
-        bestSubject = 'מטא';
+        bestSubject = 'מטאורולוגיה';
       }
       if (score6 > bestScore) {
         bestScore = score6;
-        bestSubject = 'פלטפ';
+        bestSubject = 'פלטפורמה';
       }
   
       // Display the best subject to improve
