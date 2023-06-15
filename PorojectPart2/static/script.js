@@ -43,65 +43,76 @@ function calculateGrade() {
     
     var resultElement = document.getElementById("result");
     resultElement.innerHTML = "Your grade average is: " + average.toFixed(2);
-
-    
   }
 
 
-  /* page 2 */
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const grades = {
-      hadwah: parseInt(document.getElementById("grade1")),
-      physics: parseInt(localStorage.getItem('grade2')),
-      maam: parseInt(localStorage.getItem('grade3')),
-      aviro: parseInt(localStorage.getItem('grade4')),
-      meta: parseInt(localStorage.getItem('grade5')),
-      platform: parseInt(localStorage.getItem('grade6'))
-    };
+    const calculateBtn = document.getElementById('calculateBtn');
+    const bestSubjectResult = document.getElementById('bestSubjectResult');
   
-    const easiness = {
-      hadwah: 2,
-      physics: 2.5,
-      maam: 3.5,
-      aviro: 2.5,
-      meta: 5.5,
-      platform: 5
-    };
+    calculateBtn.addEventListener('click', calculateBestSubject);
   
-    const points = {
-      hadwah: 6,
-      physics: 5.5,
-      maam: 2,
-      aviro: 5,
-      meta: 2.5,
-      platform: 3
-    };
+    function calculateBestSubject() {
+      // Retrieve the grades entered by the user
+      const grade1 = parseInt(document.getElementById('grade1').value);
+      const grade2 = parseInt(document.getElementById('grade2').value);
+      const grade3 = parseInt(document.getElementById('grade3').value);
+      const grade4 = parseInt(document.getElementById('grade4').value);
+      const grade5 = parseInt(document.getElementById('grade5').value);
+      const grade6 = parseInt(document.getElementById('grade6').value);
   
-    let bestSubject = null;
-    let maxScore = -Infinity;
+      // Calculate the scores for each subject
+      const easiness1 = 2;
+      const easiness2 = 2.5;
+      const easiness3 = 3.5;
+      const easiness4 = 2.5;
+      const easiness5 = 5.5;
+      const easiness6 = 5;
+      const points1 = 6;
+      const points2 = 5.5;
+      const points3 = 2;
+      const points4 = 5;
+      const points5 = 2.5;
+      const points6 = 3;
   
-    for (const subject in grades) {
-      const grade = grades[subject];
-      const easinessValue = easiness[subject];
-      const point = points[subject];
+      const score1 = 90 * easiness1 - grade1 * points1;
+      const score2 = 90 * easiness2 - grade2 * points2;
+      const score3 = 90 * easiness3 - grade3 * points3;
+      const score4 = 90 * easiness4 - grade4 * points4;
+      const score5 = 90 * easiness5 - grade5 * points5;
+      const score6 = 90 * easiness6 - grade6 * points6;
   
-      if (grade && easinessValue && point) {
-        const score = 90 * easinessValue - grade * point;
-        if (score > maxScore) {
-          maxScore = score;
-          bestSubject = subject;
-        }
+      // Find the subject with the highest score
+      let bestSubject = '';
+      let bestScore = -Infinity;
+  
+      if (score1 > bestScore) {
+        bestScore = score1;
+        bestSubject = 'חדווא';
       }
-    }
+      if (score2 > bestScore) {
+        bestScore = score2;
+        bestSubject = 'פיזיקה';
+      }
+      if (score3 > bestScore) {
+        bestScore = score3;
+        bestSubject = 'מעם';
+      }
+      if (score4 > bestScore) {
+        bestScore = score4;
+        bestSubject = 'אווירו';
+      }
+      if (score5 > bestScore) {
+        bestScore = score5;
+        bestSubject = 'מטא';
+      }
+      if (score6 > bestScore) {
+        bestScore = score6;
+        bestSubject = 'פלטפ';
+      }
   
-    const resultContainer = document.getElementById('result-container');
-  
-    if (resultContainer) {
-      resultContainer.textContent = "Best subject to improve: " + bestSubject;
-    } else {
-      console.log(maxScore, grades[0]);
-      console.error("Missing HTML element with specified ID: result-container");
+      // Display the best subject to improve
+      bestSubjectResult.textContent = `The best subject to improve is ${bestSubject}.`;
     }
-  });
+
   

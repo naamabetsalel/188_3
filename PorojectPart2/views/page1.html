@@ -48,9 +48,13 @@
             <input type="number" id="grade6" class="input" min="0" max="100" required>
           </div>
       
-          <button id="calculateBtn" class="btnPage1">Calculate</button>
-        </div>
-      
-        <div id="resultContainer" class="result-container">
-          <p id="bestSubjectResult"></p>
-        </div>
+          <button type="button" onclick="calculateGrade()">Calculate</button>
+        </form>
+
+      <div id="result" class="result-container"></div>
+
+      <button type="button" onclick="calculateBestSubject()">What is the best subject</button>
+    </form>
+      <div id="result" class="result-container"></div>
+
+    
