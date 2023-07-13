@@ -2,13 +2,14 @@ extends template
 
 block content
     .form-box
-        header write a review!
+        header write a review! 
         form(action="/newReview" method="get")
             .userProblems
                 label(for="newrev") 
-                input#userProblems(type="text", name="newrev")
+                input#userProblems(type="textarea", name="newrev")
             .input-box
                 input.submit(type="submit", value="Send")
-    div.result-container
-        p #{v2} 
+   
+    div.result
+        p #{r1} 
         

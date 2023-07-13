@@ -1,10 +1,10 @@
-extends template 
-block content
-    h1 Best Subject to Improve
-    div.result-container
-        p#bestSubject #{v1}
-    div.btn
-        button(type="button", onclick="/page1") UPDATE GRADES 
-        
+extends template
 
-   
+block content
+    div.page2
+        div.result-container
+            h1 Best Subject to Improve:
+            h2 #{v1}
+        div.upgrade
+            a(href="/page1") UPDATE GRADES
+        

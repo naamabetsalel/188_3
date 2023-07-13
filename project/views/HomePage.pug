@@ -14,10 +14,10 @@ block content
                 header Login
             form(action="/login" method="get")
                 div.input-box
-                    input.input-field(type="text" placeholder="Username" name="Username")
+                    input.input-field(type="text" placeholder="Username" name="Username" patern="[A-Za-z]" required)
                     i.bx.bx-user
                 div.input-box
-                    input.input-field(type="password" placeholder="Password" name="userPassword")
+                    input.input-field(type="password" placeholder="Password" name="userPassword" required)
                     i.bx.bx-lock-alt
                 div.input-box
                     input.submit(type="submit" value="Sign In")
@@ -35,19 +35,19 @@ block content
             form(action="/createNewUser" method="get")    
                 .two-forms
                     div.input-box
-                        input.input-field(type="text" placeholder="FullName" name="newFullName")
+                        input.input-field(type="text" placeholder="FullName" name="newFullName" patern="[A-Za-z]" required)
                         i.bx.bx-user
                     div.input-box
-                        input.input-field(type="email" placeholder="Email" name="newEmail")
+                        input.input-field(type="email" placeholder="Email" name="newEmail" required)
                         i.bx.bx-envelope
                 div.input-box
-                    input.input-field(type="text" placeholder="username" name="newUserName")
+                    input.input-field(type="text" placeholder="username" name="newUserName" patern="[A-Za-z]" required)
                     i.bx.bx-user
                 div.input-box
-                    input.input-field(type="password" placeholder="password" name="newPassword")
+                    input.input-field(type="password" placeholder="password" name="newPassword" required)
                     i.bx.bx-lock-alt
                 div.input-box
-                    input.submit(type="submit" value="Sign In")
+                    input.submit(type="submit" value="Sign Up")
                 div.two-col
                     div.one
                         input#register-check(type="checkbox")
