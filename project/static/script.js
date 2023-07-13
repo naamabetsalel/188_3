@@ -115,4 +115,11 @@ function calculateGrade() {
       bestSubjectResult.innerHTML = `The best subject to improve is ${bestSubject}.`;
     }
 
-  
+    const activePage = window.location.href;
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(element => {
+        if (element.href==activePage) {
+            element.classList.add('active');
+        }
+    });
+    

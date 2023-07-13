@@ -1,0 +1,54 @@
+extends template 
+block content
+    div.nav-button
+        button.btn.white-btn#loginBtn(onclick="login()") Sign In
+        button.btn#registerBtn(onclick="register()") Sign Up
+    .nav-menu-btn
+            i.bx.bx-menu#nav-menu(onclick="myMenuFunction()")  
+    .form-box
+        // Login form
+        .login-container#login
+            div.top
+                span Don't have an account? 
+                    a(href="#" onclick="register()") Sign Up
+                header Login
+            form(action="/login" method="get")
+                div.input-box
+                    input.input-field(type="text" placeholder="Username" name="Username")
+                    i.bx.bx-user
+                div.input-box
+                    input.input-field(type="password" placeholder="Password" name="userPassword")
+                    i.bx.bx-lock-alt
+                div.input-box
+                    input.submit(type="submit" value="Sign In")
+                div.two-col
+                    div.one
+                        input#login-check(type="checkbox")
+                        label(for="login-check") Remember Me
+
+        // Registration form
+        .register-container#register
+            div.top
+                span Have an account? 
+                    a(href="#" onclick="login()") Login
+                header Sign Up
+            form(action="/createNewUser" method="get")    
+                .two-forms
+                    div.input-box
+                        input.input-field(type="text" placeholder="FullName" name="newFullName")
+                        i.bx.bx-user
+                    div.input-box
+                        input.input-field(type="email" placeholder="Email" name="newEmail")
+                        i.bx.bx-envelope
+                div.input-box
+                    input.input-field(type="text" placeholder="username" name="newUserName")
+                    i.bx.bx-user
+                div.input-box
+                    input.input-field(type="password" placeholder="password" name="newPassword")
+                    i.bx.bx-lock-alt
+                div.input-box
+                    input.submit(type="submit" value="Sign In")
+                div.two-col
+                    div.one
+                        input#register-check(type="checkbox")
+                        label(for="register-check") Remember Me

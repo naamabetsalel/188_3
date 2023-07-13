@@ -1,0 +1,27 @@
+extends template 
+block content
+    form(action="/changeTable", method="get") 
+        .formPg1
+            div.p1
+                label(for="grade1") חדווא
+                input.input#grade1(type="number", name="G1", min="0", max="100", required) 
+            div.p2
+                label(for="grade2") פיזיקה
+                input.input#grade2(type="number", name="G2", min="0", max="100", required) 
+            div.p3
+                label(for="grade3") מעם למדינה
+                input.input#grade3(type="number", name="G3", min="0", max="100", required) 
+            div.p4
+                label(for="grade4") אווירודינמיקה
+                input.input#grade4(type="number", name="G4", min="0", max="100", required) 
+            div.p5
+                label(for="grade5") מטאורולוגיה
+                input.input#grade5(type="number", name="G5", min="0", max="100", required) 
+            div.p6
+                label(for="grade6") פלטפורמה
+                input.input#grade6(type="number", name="G6", min="0", max="100", required) 
+            .input-box
+                input.submit(type="submit" value="best subject to improve") 
+            div.btn
+                button(type="button", onclick="calculateGrade()") Calculate  
+            div.result-container#result

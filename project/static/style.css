@@ -22,16 +22,14 @@ body{
 }
 
 .nav{
-  position: fixed;
+  position:fixed;
   top: 0;
-  display: flex;
+  left: 0;
+  display:flex;
   justify-content: space-around;
-  width: 100%;
+  width: 50%;
   height: 100px;
-  line-height: 100px;
-  background: linear-gradient(rgb(85, 151, 173,0.2), transparent);
-  z-index: 100;
-  
+  line-height: 100px;  
 }
 
 
@@ -66,18 +64,23 @@ body{
   animation-name: example;
   animation-duration: 4s;
 }
+.nav-button{
+
+}
+
 .nav-button .btn{
   width: 130px;
   height: 40px;
+  margin-bottom: 200px;
+  margin-left: 850px;
   font-weight: 500;
   background: rgba(225, 225, 225, 0.7);
   border: none;
   border-radius: 30px;
   cursor: pointer;
   transition: .3s ease;
-  margin-top: 150px;
 }
-*/
+
 
 .btn:hover{
   background: rgba(225, 225, 225, 0.3);
@@ -87,11 +90,11 @@ body{
   margin-left: 15px;
 }
 
-.btn.white-btn{
+.btn white-btn{
   background: rgba(225, 225, 225, 0.7);
 }
 
-.btn.btn.white-btn:hover{
+.btn.btn white-btn:hover{
   background: rgba(225, 225, 225, 0.5);
 }
 .nav-menu-btn{
@@ -109,6 +112,7 @@ body{
   overflow: hidden;
   z-index: 2;
 }
+
 .login-container{
   position: absolute;
   left: 4px;
@@ -231,15 +235,17 @@ text-decoration: underline;
 @media only screen and (max-width: 820px){
 .nav-button{
   display: none;
+  margin-top: 50px;
 }
 .nav-menu.responsive{
  top: 100px;
+ margin-left: 350px;
 
 }
 .nav-menu{
   position: absolute;
-  top: -800px;
   display: flex;
+  top: -800px;
   justify-content: center;
   background: rgba(225, 225, 225, 0.2);
   width: 100%;
@@ -258,10 +264,12 @@ text-decoration: underline;
   font-size: 25px;
   color: #fff;
   padding: 10px;
+  margin-bottom: 480px;
   background: rgba(225, 225, 225, 0.2);
   border-radius: 50%;
   cursor: pointer;
   transition: .3s ;
+  
 }
 .nav-menu-btn i :hover{
   background: rgba(225, 225, 225, 0.15);
@@ -289,21 +297,6 @@ gap: 0;
 }
 }
 
-.GridContainer{
-display: grid;
-grid-template-areas: 
-'headerL headerM headerR'
-'left middle right'
-'bottomLeft bottomLeft bottomRight ';
-}
-
-/* page 1 */
-/*
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  direction: rtl; /* Set right-to-left direction for the entire page */
-
 
   h1 {
     text-align: center;
@@ -311,7 +304,7 @@ body {
     margin-left: 0px;
   }
   
-  formPg1 {
+  .formPg1 {
     max-width: 300px;
     margin: 0 auto;
     margin-left: 100px;
@@ -367,45 +360,7 @@ body {
     border: 1px solid white;
     border-radius: 4px;
   }
-  .btnGrade{
-    margin-top: 500px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight:400;
-    color: black;
-    height: 45px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background: rgba(116, 172, 210, 0.7);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    
-  }
-  .btnPage1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: 500;
-    color: black;
-    height: 45px;
-    width: 100%;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background: rgba(116, 172, 210, 0.7);
-    cursor: pointer;
-
-  }
   
-  .btnPage1:hover {
-    background: rgba(225, 225, 225, 0.5);
-    box-shadow: 1px 5px 7px 1px rgba(225, 225, 225, 0.2);
-    border: none;
-  }
   
   #result.result-container {
     margin-top: -50px; /* Adjust the margin-top value as needed */
