@@ -122,7 +122,7 @@ res.render('HomePage')
             SQL.query(Q1, NewSignUp, (err, mysqlres)=>{
                 if (err) {
                     console.log(err);
-                    res.send("something went wrong");    
+                    res.send("email/username invalid");    
                     return;
                 }
                 res.cookie("userName", req.query.newUserName);

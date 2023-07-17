@@ -1,0 +1,45 @@
+Requirements team 3
+1. Modules installed: 
+
+* express
+* path
+* mysql2
+* pug
+* cookie-parser
+* body-parser
+
+2. Delete path:
+ const dropTable = (req,res)=>{
+         const Q2 = 'DROP TABLE IF EXISTS Students, Subjects, Reviews';    
+         SQL.query(Q2, (err,mysqlres)=>{
+             if (err) {
+                 console.log(err);
+                 res.status(400).send(err);
+                 return;
+             }
+             res.send("hi - tables dropped");
+             return;
+         })};
+ 
+app.get('/dropTable', CRUD.dropTable);
+
+3. Table Syntax:
+const createTables = (req,res)=>{
+const Q11 = 'CREATE TABLE IF NOT EXISTS `Students` (name varchar(225) NOT NULL, email varchar(255) NOT NULL, username varchar(255) NOT NULL, password varchar(255) NOT NULL,  bestsubject varchar(255) DEFAULT "not inserted", PRIMARY KEY (email, username)) ENGINE=InnoDB DEFAULT CHARSET=utf8';
+SQL.query(Q11, (err, result) => {
+    if (err) throw err;
+    console.log("Table created");
+});
+const Q12 = 'CREATE TABLE IF NOT EXISTS `Subjects` (username2 varchar(255) NOT NULL PRIMARY KEY, g1 varchar(225) NOT NULL, g2 varchar(255) NOT NULL, g3 varchar(255) NOT NULL, g4 varchar(255) NOT NULL, g5 varchar(255) NOT NULL, g6 varchar(255) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8';
+SQL.query(Q12, function (err, result) {
+    if (err) throw err;
+    console.log("Table2 created");
+});
+const Q13 = 'CREATE TABLE IF NOT EXISTS `Reviews` (id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,review varchar(1000) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8';
+SQL.query(Q13, function (err, result) {
+    if (err) throw err;
+    console.log("Table3 created");
+});
+
+
+

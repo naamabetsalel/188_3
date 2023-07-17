@@ -7,6 +7,7 @@ html(lang="en")
         link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
         link(rel="stylesheet" href="style.css")
         script(defer src="script.js")
+        
     body
         .wrapper
             nav.nav
@@ -15,7 +16,7 @@ html(lang="en")
                 div.nav-menu#navMenu
                     ul
                         li
-                            a.link.active(href="/") Home
+                            a.link.active(href="/" onclick="myMenuFunction()") Home
                         li
-                            a.link(href="/reviews") reviews
+                            a.link(href="/reviews" onclick="myMenuFunction()") reviews
             block content  

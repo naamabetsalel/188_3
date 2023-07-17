@@ -54,7 +54,7 @@ function calculateGrade() {
   
    
     const activePage = window.location.href;
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('ul li a.link');
     navLinks.forEach(element => {
         if (element.href==activePage) {
             element.classList.add('active');
